@@ -52,3 +52,9 @@
     });
 
     gulp.task('default', ['less']);
+
+    gulp.task('dev', ['cleanTest'], function () {
+        gulp.start('less');
+        gulp.watch(devDir +'**', ['less']);
+
+    })
