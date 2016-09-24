@@ -16,13 +16,14 @@
 // -------------------------------------------------------------------------
 //  Typography
 // -------------------------------------------------------------------------
-@font-base                :   'Roboto,Helvetica Neue,sans-serif';
+@font-base                :   'Roboto, Helvetica Neue, sans-serif';
 
 @font-size-base           :   14px;
 
 @font-size-small          :   ceil(@font-size-base * 0.8);  // Output: 20px
 
-@line-height              :   floor(@font-size-base * 1.75);  // Output: 20px
+@line-height-base         :   tan(@font-size-base / 3.4);   // Output:1.47831609
+@line-height              :   floor(@font-size-base * 1.75);// Output: 24px
 
 
 @size-h1                  :   ceil(@font-size-base * 8.0);  // Output: 112px
@@ -32,9 +33,15 @@
 @size-h5                  :   ceil(@font-size-base * 1.7);  // Output: 24px
 @size-h6                  :   ceil(@font-size-base * 1.4);  // Output: 20px
 
-@size-h-small             :   65%;  // For h1 ~ h6 + small
+@size-h-small             :   65%;  // Para h1 ~ h6 + small
 
 @font-weight-400          :   400;
 @font-weight-500          :   500;
+@font-weight-bol          :   bold;
 
 @margins                  :   ceil(@font-size-base * 0.66); // Output: 10px
+
+
+@blockquote-font-size     :   (@font-size-base * 1.25);     // Output:  17.5px;
+@blockquote-border-color  :   @grey-500;
+@blockquote-small-color:      @grey-700;
