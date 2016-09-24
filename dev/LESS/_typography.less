@@ -1,30 +1,115 @@
+// -------------------------------------------------------------------------
+// { NoClass Typography }
+// -------------------------------------------------------------------------
+// Config Structure end Typography
+// -------------------------------------------------------------------------
 
-h1, .h1 {
+
+// -------------------------------------------------------------------------
+//  Reset Body
+// -------------------------------------------------------------------------
+
+html, body {
+  font-size: @font-size-base;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+
+  // Para garantir que toda pagina seja preenchida
+  min-height: 100%;
+
+  // Para garantir que o texto se ajuste no mobile
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+
+  // Processando texto com anti-aliasing
+  -webkit-font-smoothing: antialiased; // [4]
+  -moz-osx-font-smoothing: grayscale; // [4]
+}
+
+body {
+  font-family: @font-base;
+  font-size: @font-size-base;
+  color: @black;
+  background-color: @body-bgcolor;
+}
+
+
+// -------------------------------------------------------------------------
+//  Reset focus Style
+// -------------------------------------------------------------------------
+//  Remember to define focus styles!
+// -------------------------------------------------------------------------
+*:focus {
+  outline: 0 !important;
+}
+
+
+// -------------------------------------------------------------------------
+//  Cabeçalhos Styles
+// -------------------------------------------------------------------------
+h1 {
   font-size: @size-h1;
+  font-weight: @font-weight-400;
 }
-h2, .h2 {
+h2 {
   font-size: @size-h2;
+  font-weight: @font-weight-400;
 }
-h3, .h3 {
+h3 {
   font-size: @size-h3;
+  font-weight: @font-weight-400;
 }
-h4, .h4 {
+h4{
   font-size: @size-h4;
+  font-weight: @font-weight-400;
 }
-h5, .h5 {
+h5 {
   font-size: @size-h5;
+  font-weight: @font-weight-500;
 }
-h6, .h6 {
+h6 {
   font-size: @size-h6;
+  font-weight: @font-weight-400;
 }
 
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+// -------------------------------------------------------------------------
+//  Cabeçalho margin e Cabeçalho + spam
+// -------------------------------------------------------------------------
+h1, h2, h3, h4, h5, h6 {
   margin-top: @margins;
   margin-bottom: @margins;
+
+    //  H1 ~ H6 + small
+    small {
+      font-size: @size-h-small;
+      color: @grey-700;
+    }
+
+}
+
+
+// -------------------------------------------------------------------------
+//  Todos parágrafos
+// -------------------------------------------------------------------------
+p {
+  margin: 0 0 (@line-height / 2);
+}
+
+
+// -------------------------------------------------------------------------
+//  Texto pequeno
+// -------------------------------------------------------------------------
+small {
+  font-size: floor(100% * @font-size-small / @font-size-base);
+}
+
+
+// -------------------------------------------------------------------------
+//  Texto marcado
+// -------------------------------------------------------------------------
+mark {
+  background-color: @amber-50;
+  padding: (@line-height / 8);
 }
